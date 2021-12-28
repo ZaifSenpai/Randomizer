@@ -27,97 +27,95 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment(-0.4, -0.8),
-            stops: [0.0, 0.5, 0.5, 1],
-            colors: [
-              Colors.red,
-              Colors.red,
-              Colors.orange,
-              Colors.orange,
-            ],
-            tileMode: TileMode.repeated,
-          ),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: SingleChildScrollView(
-            physics: const BouncingScrollPhysics(),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const Divider(),
-                const Text(
-                  "Randomizer Example",
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const Divider(),
-                const Text("_randomizer.randomColor():"),
-                _ColorBox(_randomizer.randomColor()),
-                const Divider(),
-                const Text("_randomizer.randomColorWithAlpha():"),
-                _ColorBox(_randomizer.randomColorWithAlpha()),
-                const Divider(),
-                const Text("_randomizer.randomColorWithOpacity():"),
-                _ColorBox(_randomizer.randomColorWithOpacity()),
-                const Divider(),
-                const Text(
-                  "_randomizer.randomElementFromList([0, 1, 2, ..., 999]):",
-                ),
-                Text(
-                  _randomizer.randomElementFromList(_list).toString(),
-                ),
-                const Divider(),
-                const Text("_randomizer.randomInt()"),
-                Text(_randomizer.randomInt().toString()),
-                const Divider(),
-                const Text("_randomizer.randomInt(max: 1000)"),
-                Text(_randomizer.randomInt(max: 1000).toString()),
-                const Divider(),
-                const Text(
-                  "_randomizer.randomInt(max: 1000, includeNegative: true)",
-                ),
-                Text(
-                  _randomizer
-                      .randomInt(
-                        max: 1000,
-                        includeNegative: true,
-                      )
-                      .toString(),
-                ),
-                const Divider(),
-                const Text("_randomizer.randomIntInRange(10000, 999999)"),
-                Text(_randomizer.randomIntInRange(10000, 999999).toString()),
-                const Divider(),
-                const Text("_randomizer.randomDouble()"),
-                Text(_randomizer.randomDouble().toString()),
-                const Divider(),
-                const Text("_randomizer.randomDouble(max: 99)"),
-                Text(_randomizer.randomDouble(max: 99).toString()),
-                const Divider(),
-                const Text(
-                  "_randomizer.randomDouble(max: 99, includeNegative: true)",
-                ),
-                Text(
-                  _randomizer
-                      .randomDouble(
-                        max: 99,
-                        includeNegative: true,
-                      )
-                      .toString(),
-                ),
-                const Divider(),
-                const Text("_randomizer.randomDoubleInRange(10, 99)"),
-                Text(_randomizer.randomDoubleInRange(10, 99).toString()),
-                const Divider(),
+      body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        child: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment(-0.4, -0.8),
+              stops: [0.0, 0.5, 0.5, 1],
+              colors: [
+                Colors.black12,
+                Colors.white,
+                Colors.black12,
+                Colors.white,
               ],
+              tileMode: TileMode.repeated,
             ),
+          ),
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const Divider(),
+              const Text(
+                "Randomizer Example",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const Divider(),
+              const Text("_randomizer.randomColor():"),
+              _ColorBox(_randomizer.randomColor()),
+              const Divider(),
+              const Text("_randomizer.randomColorWithAlpha():"),
+              _ColorBox(_randomizer.randomColorWithAlpha()),
+              const Divider(),
+              const Text("_randomizer.randomColorWithOpacity():"),
+              _ColorBox(_randomizer.randomColorWithOpacity()),
+              const Divider(),
+              const Text(
+                "_randomizer.randomElementFromList([0, 1, 2, ..., 999]):",
+              ),
+              Text(
+                _randomizer.randomElementFromList(_list).toString(),
+              ),
+              const Divider(),
+              const Text("_randomizer.randomInt()"),
+              Text(_randomizer.randomInt().toString()),
+              const Divider(),
+              const Text("_randomizer.randomInt(max: 1000)"),
+              Text(_randomizer.randomInt(max: 1000).toString()),
+              const Divider(),
+              const Text(
+                "_randomizer.randomInt(max: 1000, includeNegative: true)",
+              ),
+              Text(
+                _randomizer
+                    .randomInt(
+                      max: 1000,
+                      includeNegative: true,
+                    )
+                    .toString(),
+              ),
+              const Divider(),
+              const Text("_randomizer.randomIntInRange(10000, 999999)"),
+              Text(_randomizer.randomIntInRange(10000, 999999).toString()),
+              const Divider(),
+              const Text("_randomizer.randomDouble()"),
+              Text(_randomizer.randomDouble().toString()),
+              const Divider(),
+              const Text("_randomizer.randomDouble(max: 99)"),
+              Text(_randomizer.randomDouble(max: 99).toString()),
+              const Divider(),
+              const Text(
+                "_randomizer.randomDouble(max: 99, includeNegative: true)",
+              ),
+              Text(
+                _randomizer
+                    .randomDouble(
+                      max: 99,
+                      includeNegative: true,
+                    )
+                    .toString(),
+              ),
+              const Divider(),
+              const Text("_randomizer.randomDoubleInRange(10, 99)"),
+              Text(_randomizer.randomDoubleInRange(10, 99).toString()),
+              const Divider(),
+            ],
           ),
         ),
       ),
