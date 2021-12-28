@@ -1,5 +1,5 @@
 # randomizer_null_safe
-Forke of [randomizer](https://github.com/SivaramNalliboyana/Randomizer) with nullsafety, optimized code, new functions and example project.
+Fork of [randomizer](https://github.com/SivaramNalliboyana/Randomizer) with nullsafety, optimized code, new functions and example project.
 
 ## Examples
 
