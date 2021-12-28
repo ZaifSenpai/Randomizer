@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:randomizer_null_safe/randomizer.dart';
+import 'package:randomizer_null_safe/randomizer_null_safe.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
