@@ -1,7 +1,7 @@
-name: randomizer
+name: randomizer_nullsafe
 description: A new Flutter package which helps in picking random color, random element from list, random numbers and many more
 version: 0.1.0
-homepage: https://github.com/GrandmasterSivaram/Randomizer
+homepage: https://github.com/ZaifSenpai/Randomizer
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
