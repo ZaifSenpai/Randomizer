@@ -1,3 +1,7 @@
+## [0.1.2] - 28.12.2021.
+* Updated README.md
+* Added assertion in randomElementFromList()
+
 ## [0.1.1] - 28.12.2021.
 * Added null safety
 * Changed package name to randomizer_null_safe

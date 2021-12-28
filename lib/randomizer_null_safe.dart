@@ -53,6 +53,7 @@ class Randomizer {
   }
 
   T randomElementFromList<T>(List<T> list) {
+    assert(list.length > 0);
     return list[_random.nextInt(list.length)];
   }
 
