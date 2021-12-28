@@ -1,4 +1,4 @@
-library randomizer_nullsafe;
+library randomizer_null_safe;
 
 import 'dart:math';
 
