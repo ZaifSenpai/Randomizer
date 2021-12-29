@@ -27,8 +27,8 @@ Use `Randomizer.instance(seed)` to initiate Randomizer with your custom seed. Th
 a different instance of `Randomizer` everytime even if seed is same.
 
 ```
-Randomizer randomizer = Randomizer.instance(N); // where N is int
-Randomizer randomizer2 = Randomizer.instance(N); // where N is another int as before
+Randomizer randomizer = Randomizer.instance(N); // N is int
+Randomizer randomizer2 = Randomizer.instance(O); // O may or may not be equal to N
 // randomizer is not equal to randomizer2
 ```
 
@@ -38,7 +38,6 @@ Only use your own seed if you know what you are doing
 
 ```
 Color color1 = randomizer.randomColor();
-Color color2 = randomizer.randomColorWithAlpha();
 Color color3 = randomizer.randomColorWithOpacity();
 ```
 

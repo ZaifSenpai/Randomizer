@@ -1,3 +1,7 @@
+## [0.1.4] - 29.12.2021.
+
+* Updated README.md
+
 ## [0.1.3] - 29.12.2021.
 
 * Replaced Randomizer.instance with Randomizer.instance() and removed Randomizer.withSeed()
@@ -18,7 +22,9 @@
 
 ## [0.0.1] - 3.07.2020.
 
-* First Release- A new Flutter package which helps in picking random color, random element and many more
+* First Release- A new Flutter package which helps in picking random color, random element and many
+  more
 
 ## [0.0.2] - 3.07.2020.
+
 * Second Release - Added new colors

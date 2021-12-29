@@ -1,6 +1,6 @@
 name: randomizer_null_safe
 description: Flutter package which helps in picking random color, random element from list, random numbers, random doubles and many more.
-version: 0.1.3
+version: 0.1.4
 homepage: https://github.com/ZaifSenpai/Randomizer
 
 environment:
