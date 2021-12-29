@@ -1,8 +1,16 @@
+## [0.1.3] - 29.12.2021.
+
+* Replaced Randomizer.instance with Randomizer.instance() and removed Randomizer.withSeed()
+* Updated screenshot and project accordingly
+* Updated README.md
+
 ## [0.1.2] - 28.12.2021.
+
 * Updated README.md
 * Added assertion in randomElementFromList()
 
 ## [0.1.1] - 28.12.2021.
+
 * Added null safety
 * Changed package name to randomizer_null_safe
 * Added example project

@@ -1,30 +1,39 @@
 library randomizer_null_safe;
 
 import 'dart:math';
-
-import 'package:flutter/material.dart';
+import 'dart:ui';
 
 class Randomizer {
   static Randomizer? _instance;
 
   late Random _random;
 
-  /// Get instance without custom [seed]
-  /// Use [Randomizer.withSeed] to instantiate
-  /// with your custom [seed]
-  static Randomizer get instance {
-    if (_instance == null) {
-      _instance = Randomizer.withSeed(null);
+  /// Returns the same Randomizer instance everytime when [seed] is null, but returns a new instance everytime when [seed] is given
+  ///
+  /// So:
+  /// ```
+  /// Randomizer.instance() == Randomizer.instance()
+  /// ```
+  /// but
+  /// ```
+  /// Randomizer.instance(n) != Randomizer.instance(n)
+  /// ```
+  ///
+  /// __It is recommended to use Randomizer.instance() without seed__
+  static Randomizer instance([int? seed]) {
+    if (seed != null) {
+      return Randomizer._withSeed(seed);
+    } else if (_instance == null) {
+      _instance = Randomizer._withSeed(seed);
     }
     return _instance!;
   }
 
-  /// Instantiate [Randomizer] with your custom [seed].
-  /// Use this only if you know what you are doing
-  Randomizer.withSeed([int? seed]) {
+  Randomizer._withSeed([int? seed]) {
     _random = Random(seed);
   }
 
+  /// Returns a random Color
   Color randomColor() {
     return Color.fromARGB(
       255,
@@ -34,15 +43,7 @@ class Randomizer {
     );
   }
 
-  Color randomColorWithAlpha() {
-    return Color.fromARGB(
-      randomIntInRange(0, 255),
-      randomIntInRange(0, 255),
-      randomIntInRange(0, 255),
-      randomIntInRange(0, 255),
-    );
-  }
-
+  /// Returns a random Color with Opacity
   Color randomColorWithOpacity() {
     return Color.fromRGBO(
       randomIntInRange(0, 255),
@@ -52,6 +53,9 @@ class Randomizer {
     );
   }
 
+  /// Returns a value from a random index in given list
+  ///
+  /// List should be non-empty
   T randomElementFromList<T>(List<T> list) {
     assert(list.length > 0);
     return list[_random.nextInt(list.length)];
