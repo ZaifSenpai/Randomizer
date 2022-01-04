@@ -1,3 +1,7 @@
+## [0.1.5] - 04.01.2022.
+
+* Updated UI of example and the screenshot in the README.md
+
 ## [0.1.4] - 29.12.2021.
 
 * Updated README.md

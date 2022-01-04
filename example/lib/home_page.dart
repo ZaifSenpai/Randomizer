@@ -26,23 +26,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment(-0.4, -0.8),
-            stops: [0.0, 0.5, 0.5, 1],
-            colors: [
-              Colors.black12,
-              Colors.white,
-              Colors.black12,
-              Colors.white,
-            ],
-            tileMode: TileMode.repeated,
-          ),
-        ),
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Padding(
@@ -142,42 +128,44 @@ class _ColorBox extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 100,
-          height: 24,
-          decoration: BoxDecoration(
-            color: color,
-            border: Border.all(
-              color: Colors.black54,
-              width: 0.5,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment(-0.4, -0.8),
+              stops: [0.0, 0.5, 0.5, 1],
+              colors: [
+                Colors.black12,
+                Colors.white,
+                Colors.black12,
+                Colors.white,
+              ],
+              tileMode: TileMode.repeated,
             ),
-            borderRadius: const BorderRadius.all(
-              Radius.circular(10),
+            borderRadius: BorderRadius.all(
+              Radius.circular(4),
+            ),
+          ),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 8,
+            vertical: 4,
+          ),
+          child: Container(
+            width: 100,
+            height: 24,
+            decoration: BoxDecoration(
+              color: color,
+              border: Border.all(
+                color: Colors.black54,
+                width: 0.5,
+              ),
+              borderRadius: const BorderRadius.all(
+                Radius.circular(10),
+              ),
             ),
           ),
         ),
-        const VTDivider(),
         SelectableText(color.toString()),
       ],
     );
-  }
-}
-
-/// Transparent Divider
-class TDivider extends StatelessWidget {
-  const TDivider({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return const Divider(color: Colors.transparent);
-  }
-}
-
-/// Transparent VerticalDivider
-class VTDivider extends StatelessWidget {
-  const VTDivider({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return const VerticalDivider(color: Colors.transparent);
   }
 }
