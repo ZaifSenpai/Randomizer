@@ -1,3 +1,7 @@
+## [0.1.6] - 21.06.2025.
+
+* improve README usage examples
+
 ## [0.1.5] - 04.01.2022.
 
 * Updated UI of example and the screenshot in the README.md

@@ -14,9 +14,9 @@ random doubles and many more.
 Use `Randomizer.instance()` to get same static instance everytime.
 
 ```
-Randomizer randomizer = Randomizer.instance();
-Randomizer randomizer2 = Randomizer.instance();
-// randomizer is equal to randomizer2
+Randomizer r1 = Randomizer.instance();
+Randomizer r2 = Randomizer.instance();
+// r1 and r2 uses same instance
 ```
 
 This is recommended way to use Randomizer
@@ -27,9 +27,9 @@ Use `Randomizer.instance(seed)` to initiate Randomizer with your custom seed. Th
 a different instance of `Randomizer` everytime even if seed is same.
 
 ```
-Randomizer randomizer = Randomizer.instance(N); // N is int
-Randomizer randomizer2 = Randomizer.instance(O); // O may or may not be equal to N
-// randomizer is not equal to randomizer2
+Randomizer r1 = Randomizer.instance(N1);
+Randomizer r2 = Randomizer.instance(N2);
+// r1 and r2 uses different instances
 ```
 
 Only use your own seed if you know what you are doing
